@@ -23,7 +23,7 @@ set -e
 case "$1" in
     configure)
         # Make nvidia-modprobe setuid root
-        chmod ug+s #BINDIR#/nvidia-modprobe
+        chmod ug+s /usr/bin/nvidia-modprobe
     ;;
 
     abort-upgrade|abort-remove|abort-deconfigure)
