@@ -1,0 +1,2 @@
+#DIRNAME#/nvidia-modprobe #BINDIR#
+#DIRNAME#/nvidia-modprobe.1.gz #MANDIR#

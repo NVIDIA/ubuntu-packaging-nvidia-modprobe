@@ -1,0 +1,18 @@
+Source: nvidia-modprobe
+Section: unknown
+Priority: extra
+Maintainer: Alberto Milone <alberto.milone@canonical.com>
+Build-Depends: debhelper (>= 8.0.0)
+Standards-Version: 3.9.2
+Homepage: ftp://download.nvidia.com/XFree86/nvidia-modprobe
+Vcs-Git: git://github.com/tseliot/nvidia-modprobe.git
+Vcs-Browser: https://github.com/tseliot/nvidia-modprobe.git
+
+Package: nvidia-modprobe
+Architecture: i386 amd64 lpia
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Load the NVIDIA kernel driver and create device files
+ nvidia-modprobe is a simple setuid root utility which loads the NVIDIA kenel
+ module and creates the NVIDIA device files, to allow usage of the NVIDIA
+ driver by client applications that would otherwise not have sufficient
+ permission to load the module or create the device files on their own.

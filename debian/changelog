@@ -1,0 +1,5 @@
+nvidia-modprobe (319.03-1) unstable; urgency=low
+
+  * Initial release (Closes: #nnnn)  <nnnn is the bug number of your ITP>
+
+ -- Alberto Milone <alberto.milone@canonical.com>  Tue, 12 Mar 2013 13:41:00 +0100

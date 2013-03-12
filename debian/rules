@@ -1,0 +1,45 @@
+#!/usr/bin/make -f
+# -*- makefile -*-
+# Copyright (C) 2013 Canonical Ltd.
+
+# Uncomment this to turn on verbose mode.
+#export DH_VERBOSE=1
+
+.PHONY: regen-from-templates
+regen-from-templates:
+	#Create important strings
+	for i in control \
+		dirs \
+		postrm \
+		postinst \
+		prerm; do \
+                sed -e "s|#LIBDIR#|$(libdir)|g"         \
+                        -e "s|#BINDIR#|$(bindir)|g"         \
+                        -e "s|#VERSION#|$(PKG_version)|g"   \
+                        -e "s|#SYSCONFDIR#|$(sysconfdir)|g" \
+                        -e "s|#MANDIR#|$(mandir)|g" \
+                        -e "s|#PKGMANDIR#|$(PKG_mandir)|g" \
+                        -e "s|#LDSOCONF#|$(ld_so_conf_path)|g" \
+                        -e "s|#ALTPRIORITY#|$(alt_priority)|g" \
+                        -e "s|#DATADIR#|$(datadir)|g" \
+                        -e "s|#PKGDESKDIR#|$(PKG_deskdir)|g" \
+                        -e "s|#PKGDATADIR#|$(PKG_datadir)|g" \
+                        -e "s|#PKGCONFIGDIR#|$(PKG_configdir)|g" \
+                        -e "s|#PKGBINDIR#|$(PKG_bindir)|g" \
+                        -e "s|#PKGLIBDIR#|$(PKG_libdir)|g" \
+                        -e "s|#PKGNAME#|$(PKG_name)|g" \
+                        -e "s|#FLAVOUR#|$(PKG_flavour)|g" \
+                        -e "s|#SRCNAME#|$(PKG_source)|g" \
+                        -e "s|#INCLUDEDIR#|$(includedir)|g" \
+                        -e "s|#PKGINCLUDEDIR#|$(PKG_includedir)|g" \
+                        debian/$$i.in > debian/$$i;      \
+        done
+
+#build: build-arch
+#build-arch: regen-from-templates
+
+override_dh_auto_install:
+	dh_auto_install -- prefix=$(CURDIR)/debian/$(PKG_name)/usr
+
+%:
+	dh $@ 
