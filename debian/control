@@ -1,5 +1,5 @@
 Source: nvidia-modprobe
-Section: unknown
+Section: contrib/x11
 Priority: extra
 Maintainer: Alberto Milone <alberto.milone@canonical.com>
 Build-Depends: debhelper (>= 8.0.0)
