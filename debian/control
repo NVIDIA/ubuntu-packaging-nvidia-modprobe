@@ -2,7 +2,7 @@ Source: nvidia-modprobe
 Section: contrib/x11
 Priority: extra
 Maintainer: Alberto Milone <alberto.milone@canonical.com>
-Build-Depends: debhelper (>= 8.0.0)
+Build-Depends: debhelper (>= 8.0.0), m4
 Standards-Version: 3.9.2
 Homepage: ftp://download.nvidia.com/XFree86/nvidia-modprobe
 Vcs-Git: git://github.com/tseliot/nvidia-modprobe.git
