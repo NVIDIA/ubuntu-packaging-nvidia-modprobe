@@ -1,5 +1,5 @@
-nvidia-modprobe (319.12-0ubuntu1) UNRELEASED; urgency=low
+nvidia-modprobe (319.23-0ubuntu1) UNRELEASED; urgency=low
 
   * 
 
- -- Alberto Milone <alberto.milone@canonical.com>  Wed, 10 Apr 2013 17:05:54 +0200
+ -- Alberto Milone <alberto.milone@canonical.com>  Fri, 24 May 2013 12:49:44 +0200
