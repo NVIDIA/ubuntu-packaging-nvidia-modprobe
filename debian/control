@@ -9,7 +9,7 @@ Vcs-Git: git://github.com/tseliot/nvidia-modprobe.git
 Vcs-Browser: https://github.com/tseliot/nvidia-modprobe.git
 
 Package: nvidia-modprobe
-Architecture: i386 amd64 lpia
+Architecture: i386 amd64 lpia ppc64el
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Description: Load the NVIDIA kernel driver and create device files
  nvidia-modprobe is a simple setuid root utility which loads the NVIDIA kenel
